@@ -52,7 +52,17 @@ a:visited {
 .logo {
   height: 5.2rem;
   align-self: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+}
+
+.edit__btn {
+  align-self: flex-end;
+  font-size: 1.65rem;
+  margin-bottom: 1rem;
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .workouts {
