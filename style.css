@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   color: var(--color-light--2);
   font-weight: 400;
   line-height: 1.6;
@@ -55,8 +55,19 @@ a:visited {
   margin-bottom: 3rem;
 }
 
+.flex-parent {
+  display: flex;
+}
+
 .edit__btn {
-  align-self: flex-end;
+  flex: 1;
+  font-size: 1.65rem;
+  margin-bottom: 1rem;
+}
+
+.remove__btn {
+  flex: 1;
+  text-align: right;
   font-size: 1.65rem;
   margin-bottom: 1rem;
 }
