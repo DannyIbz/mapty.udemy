@@ -7,7 +7,8 @@ const inputDistance = document.querySelector(".form__input--distance");
 const inputDuration = document.querySelector(".form__input--duration");
 const inputCadence = document.querySelector(".form__input--cadence");
 const inputElevation = document.querySelector(".form__input--elevation");
-const editbtn = document.querySelector(".edit__btn");
+const editBtn = document.querySelector(".edit__btn");
+const removeAllBtn = document.querySelector(".remove__btn");
 
 class Workout {
   date = new Date();
@@ -85,10 +86,12 @@ class App {
     // Get data from local storage
     this._getLocalStorage();
 
-    // Attache event handlers
+    // Attached event handlers
     form.addEventListener("submit", this._newWorkout.bind(this));
     inputType.addEventListener("change", this._toggleElevationField);
     containerWorkouts.addEventListener("click", this._moveToPopup.bind(this));
+    // editBtn.addEventListener("click", this._editButtonActions(this));
+    // removeAllBtn.addEventListener("click", this._reset(this));
   }
 
   _getPosition() {
@@ -228,7 +231,7 @@ class App {
   }
 
   _renderWorkout(workout) {
-    editbtn.classList.remove("hidden");
+    editBtn.classList.remove("hidden");
 
     let html = `
     <li class="workout workout--${workout.type}" data-id="${workout.id}">
@@ -316,8 +319,14 @@ class App {
     });
   }
 
+  _editButtonActions() {
+    editBtn.addEventListener("click", () => {
+      removeAllBtn.classList.remove("hidden");
+    });
+  }
+
   // Remove all the workouts stored on the local storage
-  reset() {
+  _reset() {
     localStorage.removeItem("workouts");
     location.reload();
   }

@@ -61,19 +61,34 @@ a:visited {
 
 .edit__btn {
   flex: 1;
-  font-size: 1.65rem;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 400;
   margin-bottom: 1rem;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .remove__btn {
   flex: 1;
   text-align: right;
-  font-size: 1.65rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
 }
 
 .hidden {
   opacity: 0;
+  display: none;
 }
 
 .workouts {
